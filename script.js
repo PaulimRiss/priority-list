@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const buildUL = (list) => {
-    // for each task in list, create a li element and append it to ul, also add a button to remove the task linked with removeTask() and 2 buttons up and down to change the task index linked with changeTaskIndex()
     const ul = document.querySelector('#ulTasks');
 
     ul.innerHTML = '';
@@ -45,14 +44,12 @@ const buildUL = (list) => {
             event.preventDefault();
         }
         li.ondrop = (event) => {
-            // check the index of the element being dragged over and the element being dragged
             const ul = document.querySelector('#ulTasks');
             const li = event.target;
 
             const index = Array.prototype.indexOf.call(ul.children, li);
 
             const draggedIndex = parseInt(event.dataTransfer.getData('text/plain'));
-            // if the element being dragged is not the same as the element being dragged over, swap the 2 elements in the list and rebuild the ul
             if (index != draggedIndex) {
                 changeTaskIndex(list, draggedIndex, index);
                 saveList(list);
