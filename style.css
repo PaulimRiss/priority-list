@@ -1,0 +1,25 @@
+li {
+    padding: 0 10px;
+    width: 5vw;
+    height: 5vw;
+    border: 1px solid #000;
+    background-color: cadetblue;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.orderButtons {
+    display: inline-block;
+
+}
+
+.orderButtons button {
+    /* context: this class is a div with 2 buttons up and down, I want them to be not inline in this div but in block */
+    display: block;
+}
